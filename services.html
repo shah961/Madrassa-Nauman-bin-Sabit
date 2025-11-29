@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBS | SERVICES</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri+Quran&display=swap"
+        rel="stylesheet">
+</head>
+<body>
+    <!-- ****** NAVBAR ******* -->
+    <nav class="navbar" data-aos="fade-down">
+        <div class="logo">
+            <a href="#home" target="_blank"><img src="./images/logo.jpeg" alt="NBS logo"></a>
+        </div>
+
+        <ul class="navList">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+            <img src="./images/hamburger.png" alt="Menu">
+        </button>
+    </nav>
+    <header class="section1" id="home" data-aos="fade-up">
+        <img id="mono" src="./images/logo.jpeg" alt="NBS center logo" data-aos="zoom-in">
+        <h1 class="heading" data-aos="fade-up">مدرسة نعمان بن ثابت</h1>
+ 
+      <!-- SERVICES -->
+      <section class="content" id="services" data-aos="fade-left" >
+        <div class="contentBox">
+            <h2>Our Services</h2>
+            <p data-aos="fade-up" data-aos-delay="300" data-aos-duration="1500" style="color: white;">At <strong>مدرسة نعمان بن ثابت (NBS)</strong>, we offer a wide range of educational and developmental services designed to cater to students of all ages and levels. Our programs are structured to ensure comprehensive growth—spiritual, academic, and personal—while maintaining a strong foundation in Islamic values. Our services include:</p>
+    
+            <h3>1. Quranic Education</h3>
+            <ul>
+                <li>Complete memorization (Hifz) of the Quran with accurate Tajweed.</li>
+                <li>Tafseer (understanding and interpretation) classes for contextual learning.</li>
+                <li>Recitation training to improve fluency, pronunciation, and rhythm.</li>
+                <li>Advanced Quranic studies for students interested in scholarship and teaching.</li>
+            </ul>
+    
+            <h3>2. Islamic Studies</h3>
+            <ul>
+                <li>Fiqh (Islamic jurisprudence) lessons to instill practical religious knowledge.</li>
+                <li>Hadith studies with emphasis on authentic sources and chains of narration.</li>
+                <li>Seerah (biography of the Prophet Muhammad ﷺ) lessons to learn moral and historical lessons.</li>
+                <li>Aqeedah (Islamic creed) classes to strengthen faith and understanding of Islamic beliefs.</li>
+                <li>Comparative religion studies to encourage awareness, tolerance, and informed perspectives.</li>
+            </ul>
+    
+            <h3>3. Arabic Language Learning</h3>
+            <ul>
+                <li>Grammar (Nahw and Sarf) classes to develop strong linguistic skills.</li>
+                <li>Reading and writing comprehension for effective communication.</li>
+                <li>Classical Arabic literature to connect students with historical Islamic scholarship.</li>
+                <li>Conversational Arabic sessions for practical usage in everyday contexts.</li>
+            </ul>
+    
+            <h3>4. Modern Academic Support</h3>
+            <ul>
+                <li>Mathematics, science, and English language support integrated alongside religious education.</li>
+                <li>Study skills, critical thinking, and research methodology workshops.</li>
+                <li>Guidance for school or university exams for students balancing madrassa and mainstream education.</li>
+            </ul>
+    
+            <h3>5. Character and Personal Development</h3>
+            <ul>
+                <li>Morality and ethics sessions rooted in Islamic teachings.</li>
+                <li>Leadership and teamwork training through group projects and community activities.</li>
+                <li>Time management, self-discipline, and goal-setting workshops.</li>
+                <li>Counseling and mentorship programs for emotional and spiritual support.</li>
+            </ul>
+    
+            <h3>6. Extra-Curricular Programs</h3>
+            <ul>
+                <li>Public speaking and Quran recitation competitions to boost confidence.</li>
+                <li>Art, calligraphy, and creative writing classes to encourage cultural expression.</li>
+                <li>Community service programs to instill empathy, responsibility, and civic awareness.</li>
+                <li>Seasonal camps and workshops for immersive learning experiences.</li>
+            </ul>
+    
+            <h3>7. Family & Community Engagement</h3>
+            <ul>
+                <li>Parent-teacher sessions to keep families actively involved in their child’s learning journey.</li>
+                <li>Community lectures and seminars on contemporary Islamic issues.</li>
+                <li>Inter-school events promoting collaboration, knowledge sharing, and social responsibility.</li>
+            </ul>
+    
+            <p style="color: white;">At NBS, we are committed to offering a <strong>holistic education</strong> that nurtures not just the mind but also the heart and character. Each of our services is carefully designed to ensure that students leave with <strong>deep knowledge, strong faith, excellent personal skills, and the confidence</strong> to contribute positively to society.</p>
+        </div>
+    </section>
+</header>
+<footer>&copy; <span id="year"></span> NBS Islamic School System — All rights reserved</footer>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+    AOS.init({
+      duration: 1000, // animation duration in ms
+      easing: 'ease-in-out',
+      once: true, // whether animation should happen only once
+    });
+  </script>
+<script>
+    // set year
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Toggle menu
+    function toggleMenu(btn) {
+        const nav = document.querySelector('.navList');
+        nav.classList.toggle('active');
+        btn.classList.toggle('active');
+        const expanded = btn.getAttribute('aria-expanded') === 'true';
+        btn.setAttribute('aria-expanded', String(!expanded));
+    }
+
+    // Close menu when link clicked
+    document.querySelectorAll('.navList a').forEach(a => {
+        a.addEventListener('click', () => {
+            const nav = document.querySelector('.navList');
+            if (nav.classList.contains('active')) nav.classList.remove('active');
+            const btn = document.querySelector('.hamburger');
+            btn.setAttribute('aria-expanded', 'false');
+            btn.classList.remove('active');
+        });
+    });
+
+    // Optional: Close menu when clicking outside
+    document.addEventListener('click', (e) => {
+        const nav = document.querySelector('.navList');
+        const btn = document.querySelector('.hamburger');
+        if (!nav.contains(e.target) && !btn.contains(e.target) && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            btn.classList.remove('active');
+            btn.setAttribute('aria-expanded', 'false');
+        }
+    });
+</script>
+<!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration in ms
+    easing: 'ease-in-out',
+    once: true, // animate only once
+  });
+</script>
+
+</body>
+</html>

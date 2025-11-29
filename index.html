@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- AOS CSS -->
+<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <title>NBS | HOME</title>
+
+    <!-- Google Fonts -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri+Quran&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar" data-aos="fade-down">
+        <div class="logo">
+            <a href="#home" target="_blank"><img src="./images/logo.jpeg" alt="NBS logo"></a>
+        </div>
+
+        <ul class="navList">
+            <li><a href="#home">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+
+        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+            <img src="./images/hamburger.png" alt="Menu">
+        </button>
+    </nav>
+
+    <!-- HERO -->
+    <header class="section1" id="home" data-aos="fade-up">
+        <img id="mono" src="./images/logo.jpeg" alt="NBS center logo"  data-aos="zoom-in">
+        <h1 class="heading" data-aos="fade-up">مدرسة نعمان بن ثابت</h1>
+    </header>
+  
+    <!-- CONTACT -->
+ 
+
+    <footer>&copy; <span id="year"></span> NBS  Islamic School System — All rights reserved</footer>
+
+    <script>
+        // set year
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Toggle menu
+        function toggleMenu(btn) {
+            const nav = document.querySelector('.navList');
+            nav.classList.toggle('active');
+            btn.classList.toggle('active');
+            const expanded = btn.getAttribute('aria-expanded') === 'true';
+            btn.setAttribute('aria-expanded', String(!expanded));
+        }
+
+        // Close menu when link clicked
+        document.querySelectorAll('.navList a').forEach(a => {
+            a.addEventListener('click', () => {
+                const nav = document.querySelector('.navList');
+                if (nav.classList.contains('active')) nav.classList.remove('active');
+                const btn = document.querySelector('.hamburger');
+                btn.setAttribute('aria-expanded', 'false');
+                btn.classList.remove('active');
+            });
+        });
+
+        // Optional: Close menu when clicking outside
+        document.addEventListener('click', (e) => {
+            const nav = document.querySelector('.navList');
+            const btn = document.querySelector('.hamburger');
+            if (!nav.contains(e.target) && !btn.contains(e.target) && nav.classList.contains('active')) {
+                nav.classList.remove('active');
+                btn.classList.remove('active');
+                btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+        AOS.init({
+          duration: 1000, // animation duration in ms
+          easing: 'ease-in-out',
+          once: true, // whether animation should happen only once
+        });
+      </script>
+      <!-- AOS JS -->
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init({
+    duration: 1000, // animation duration in ms
+    easing: 'ease-in-out',
+    once: true, // animate only once
+  });
+</script>
+
+</body>
+
+</html>
