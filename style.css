@@ -116,7 +116,7 @@ html {
             justify-content: center;
             text-align: center;
             background: linear-gradient(180deg, rgba(0, 0, 0, 0.55) 0%, rgba(0, 0, 0, 0.55) 100%),
-                url('../images/bg.jpg') center/cover no-repeat;
+                url('bg.jpg') center/cover no-repeat;
                 background-attachment: fixed;
         }
 
@@ -239,4 +239,5 @@ html {
         /* Hamburger rotation when active */
         .hamburger.active img {
             transform: rotate(90deg);
+
         }
