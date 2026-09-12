@@ -1,109 +1,201 @@
 <!DOCTYPE html>
-<html lang="ar">
-
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <!-- AOS CSS -->
-<link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>NBS Islamic School System | مدرسة نعمان بن ثابت</title>
+<meta name="description" content="مدرسة نعمان بن ثابت (NBS) is an Islamic school offering Quranic education, Islamic studies, Arabic language learning, academic support, and character development for students of all ages." />
+<link rel="canonical" href="https://madrassa-nauman-bin-sabit-five.vercel.app/" />
 
-    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
-    <title>NBS | HOME</title>
+<!-- Open Graph -->
+<meta property="og:type" content="website" />
+<meta property="og:title" content="NBS Islamic School System | مدرسة نعمان بن ثابت" />
+<meta property="og:description" content="Quranic education, Islamic studies, Arabic language, academic support and character development — one educational community." />
+<meta property="og:url" content="https://madrassa-nauman-bin-sabit-five.vercel.app/" />
+<meta property="og:image" content="https://madrassa-nauman-bin-sabit-five.vercel.app/logo.jpeg" />
 
-    <!-- Google Fonts -->
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Amiri+Quran&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="NBS Islamic School System | مدرسة نعمان بن ثابت" />
+<meta name="twitter:description" content="Quranic education, Islamic studies, Arabic language, academic support and character development." />
+<meta name="twitter:image" content="https://madrassa-nauman-bin-sabit-five.vercel.app/logo.jpeg" />
 
-<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Amiri+Quran&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 
-    <!-- NAVBAR -->
-    <nav class="navbar" data-aos="fade-down">
-        <div class="logo">
-            <a href="#home" target="_blank"><img src="logo.jpeg" alt="NBS logo"></a>
-        </div>
-
-        <ul class="navList">
-            <li><a href="#home">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-
-        <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
-            <img src="hamburger.png" alt="Menu">
-        </button>
-    </nav>
-
-    <!-- HERO -->
-    <header class="section1" id="home" data-aos="fade-up">
-        <img id="mono" src="logo.jpeg" alt="NBS center logo"  data-aos="zoom-in">
-        <h1 class="heading" data-aos="fade-up">مدرسة نعمان بن ثابت</h1>
-    </header>
-  
-    <!-- CONTACT -->
- 
-
-    <footer>&copy; <span id="year"></span> NBS  Islamic School System — All rights reserved</footer>
-
-    <script>
-        // set year
-        document.getElementById('year').textContent = new Date().getFullYear();
-
-        // Toggle menu
-        function toggleMenu(btn) {
-            const nav = document.querySelector('.navList');
-            nav.classList.toggle('active');
-            btn.classList.toggle('active');
-            const expanded = btn.getAttribute('aria-expanded') === 'true';
-            btn.setAttribute('aria-expanded', String(!expanded));
-        }
-
-        // Close menu when link clicked
-        document.querySelectorAll('.navList a').forEach(a => {
-            a.addEventListener('click', () => {
-                const nav = document.querySelector('.navList');
-                if (nav.classList.contains('active')) nav.classList.remove('active');
-                const btn = document.querySelector('.hamburger');
-                btn.setAttribute('aria-expanded', 'false');
-                btn.classList.remove('active');
-            });
-        });
-
-        // Optional: Close menu when clicking outside
-        document.addEventListener('click', (e) => {
-            const nav = document.querySelector('.navList');
-            const btn = document.querySelector('.hamburger');
-            if (!nav.contains(e.target) && !btn.contains(e.target) && nav.classList.contains('active')) {
-                nav.classList.remove('active');
-                btn.classList.remove('active');
-                btn.setAttribute('aria-expanded', 'false');
-            }
-        });
-    </script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-        AOS.init({
-          duration: 1000, // animation duration in ms
-          easing: 'ease-in-out',
-          once: true, // whether animation should happen only once
-        });
-      </script>
-      <!-- AOS JS -->
-<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-<script>
-  AOS.init({
-    duration: 1000, // animation duration in ms
-    easing: 'ease-in-out',
-    once: true, // animate only once
-  });
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "EducationalOrganization",
+  "name": "NBS Islamic School System",
+  "alternateName": "مدرسة نعمان بن ثابت",
+  "url": "https://madrassa-nauman-bin-sabit-five.vercel.app/",
+  "logo": "https://madrassa-nauman-bin-sabit-five.vercel.app/logo.jpeg",
+  "description": "An Islamic educational institution offering Quranic education, Islamic studies, Arabic language learning, modern academic support, character development, extra-curricular programs, and family and community engagement."
+}
 </script>
+</head>
+<body class="no-js">
+<a href="#main" class="skip-link">Skip to main content</a>
 
+<nav class="navbar" aria-label="Primary">
+  <div class="logo">
+    <a href="index.html" aria-label="NBS home"><img src="logo.jpeg" alt="NBS Islamic School System logo" width="52" height="52"></a>
+  </div>
+  <ul class="navList" id="navList">
+    <li><a href="index.html" aria-current="page">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html" class="nav-cta">Contact</a></li>
+  </ul>
+  <button class="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="navList">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<main id="main">
+  <header class="hero">
+    <div class="hero-inner">
+      <img class="hero-logo" src="logo.jpeg" alt="NBS Islamic School System emblem" width="168" height="168">
+      <p class="hero-eyebrow">NBS Islamic School System</p>
+      <h1 class="hero-heading">مدرسة نعمان بن ثابت</h1>
+      <p class="hero-subheading">An educational community built on Quranic learning, Islamic studies, Arabic language, and academic support — nurturing knowledge, faith and character together.</p>
+      <div class="hero-ctas">
+        <a href="services.html" class="btn btn-primary">Explore our services</a>
+        <a href="about.html" class="btn btn-secondary">Learn more about NBS</a>
+      </div>
+    </div>
+  </header>
+
+  <section class="section-alt">
+    <div class="container">
+      <div class="section-head center">
+        <h2>Education that grows the whole student</h2>
+        <p>Every program at NBS is built around four things working together: the Quran, Islamic knowledge, the Arabic language, and a strong academic foundation.</p>
+      </div>
+      <div class="card-grid js-reveal">
+        <div class="panel">
+          <div class="panel-icon-row">
+            <svg class="star-bullet" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 6.2L21 10l-6.2 2.6L12 19l-2.8-6.4L3 10l6.4-2.8z"/></svg>
+            <h3>Quranic Education</h3>
+          </div>
+          <p>Hifz, Tajweed, Tafseer and recitation training, from first steps through advanced Quranic study.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-icon-row">
+            <svg class="star-bullet" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 6.2L21 10l-6.2 2.6L12 19l-2.8-6.4L3 10l6.4-2.8z"/></svg>
+            <h3>Islamic Studies</h3>
+          </div>
+          <p>Fiqh, Hadith, Seerah and Aqeedah, taught alongside comparative religion studies.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-icon-row">
+            <svg class="star-bullet" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 6.2L21 10l-6.2 2.6L12 19l-2.8-6.4L3 10l6.4-2.8z"/></svg>
+            <h3>Arabic Language</h3>
+          </div>
+          <p>Nahw, Sarf, reading, writing and classical literature, plus conversational Arabic.</p>
+        </div>
+        <div class="panel">
+          <div class="panel-icon-row">
+            <svg class="star-bullet" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 1l2.6 6.2L21 10l-6.2 2.6L12 19l-2.8-6.4L3 10l6.4-2.8z"/></svg>
+            <h3>Academic Support</h3>
+          </div>
+          <p>Mathematics, science, English and study skills, integrated alongside religious education.</p>
+        </div>
+      </div>
+      <div class="text-center" style="margin-top: 2.5rem;">
+        <a href="services.html" class="btn btn-outline">View all seven service areas</a>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="container">
+      <div class="section-head center js-reveal">
+        <h2>Why families choose NBS</h2>
+        <p>A holistic approach that nurtures the mind, the heart and the character together.</p>
+      </div>
+      <div class="card-grid js-reveal">
+        <div class="panel">
+          <h3>Spiritual grounding</h3>
+          <p>Quran and Islamic studies sit at the center of the curriculum, not as an add-on to it.</p>
+        </div>
+        <div class="panel">
+          <h3>Academic balance</h3>
+          <p>Modern academic support runs alongside religious education, for students juggling both.</p>
+        </div>
+        <div class="panel">
+          <h3>Character first</h3>
+          <p>Leadership, discipline and mentorship are treated as core outcomes, not extras.</p>
+        </div>
+        <div class="panel">
+          <h3>Community involvement</h3>
+          <p>Parents and the wider community are part of the learning journey, not spectators to it.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section-alt">
+    <div class="container text-center js-reveal">
+      <h2>Ready to learn more?</h2>
+      <p class="lede" style="margin: 12px auto 0 auto;">Get in touch with NBS to ask about our programs, or explore the full range of services we offer.</p>
+      <div class="hero-ctas" style="margin-top: 1.75rem;">
+        <a href="contact.html" class="btn btn-primary">Contact us</a>
+        <a href="services.html" class="btn btn-outline">Explore services</a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">
+          <img src="logo.jpeg" alt="" width="44" height="44">
+          <span>NBS Islamic School System</span>
+        </div>
+        <p style="max-width: 32ch; font-size: 0.92rem; color: rgba(247,243,232,0.75);">مدرسة نعمان بن ثابت — an Islamic educational institution nurturing knowledge, faith and character.</p>
+      </div>
+      <div>
+        <h4>Navigate</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Services</h4>
+        <ul>
+          <li><a href="services.html#quranic-education">Quranic Education</a></li>
+          <li><a href="services.html#islamic-studies">Islamic Studies</a></li>
+          <li><a href="services.html#arabic-language">Arabic Language</a></li>
+          <li><a href="services.html#academic-support">Academic Support</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <ul>
+          <li><a href="privacy-policy.html">Privacy Policy</a></li>
+          <li><a href="terms.html">Terms &amp; Conditions</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&copy; <span id="year"></span> NBS Islamic School System — All rights reserved</span>
+      <span><span class="placeholder">[Insert official contact email]</span></span>
+    </div>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="main.js" defer></script>
+<script src="animations.js" defer></script>
 </body>
-
-
 </html>
-
-
